@@ -1,8 +1,8 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "electronVersion": "45.1.0",
   "electronSha256": "55eaba17abff7b5bba6c3bbc85068967379024fe742fe9c7fdba9118922ccbe2",
-  "archiveSha256": "b7d09a025549e1337f478e9bbdd7333bb1683c9d01968da3279de4a6c87d2337",
+  "archiveSha256": "ca7910e7c99959ab52b2ba08045b156f1f31cf4b4af1c41388ae9f8fd6cbd14e",
   "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAIsj2kzj9icWt9UwFk1IXSLsD+tJqqQoJKAesl3pGVZU=\n-----END PUBLIC KEY-----\n",
   "publish": {
     "provider": "github",
