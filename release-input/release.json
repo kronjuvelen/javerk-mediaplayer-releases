@@ -1,8 +1,8 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "electronVersion": "45.1.0",
   "electronSha256": "55eaba17abff7b5bba6c3bbc85068967379024fe742fe9c7fdba9118922ccbe2",
-  "archiveSha256": "49cd40c3843507ea4dc8cf0f44c6af08438421551b6450eb08b260da546f8cf0",
+  "archiveSha256": "6f3e76384d9a03467f44e727f5cdef582e36ec3c558e47e098ad01991f5f1e4e",
   "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAIsj2kzj9icWt9UwFk1IXSLsD+tJqqQoJKAesl3pGVZU=\n-----END PUBLIC KEY-----\n",
   "publish": {
     "provider": "github",
@@ -40,6 +40,7 @@
     "app.asar.gz.023",
     "app.asar.gz.024",
     "app.asar.gz.025",
-    "app.asar.gz.026"
+    "app.asar.gz.026",
+    "app.asar.gz.027"
   ]
 }
