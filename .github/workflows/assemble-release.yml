@@ -1,0 +1,32 @@
+name: Assemble Windows release
+on:
+  push:
+    paths: ['release-input/release.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: assemble-windows
+  cancel-in-progress: false
+jobs:
+  assemble:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts --no-audit
+      - run: node scripts/materialize.cjs
+      - run: npx --no-install electron-builder --config assembler.cjs --prepackaged stage --win --x64 --publish never
+      - name: Test packaged application
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath (Resolve-Path 'stage/Javerk Mediaplayer.exe') -ArgumentList '--smoke-test','--disable-gpu' -WindowStyle Hidden -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "Application test failed: $($p.ExitCode)" }
+      - name: Upload draft and record metadata for release-key approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: node scripts/draft.cjs
