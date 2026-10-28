@@ -1,0 +1,15 @@
+{
+  "name": "per-panel",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Javerk Mediaplayer release packaging",
+  "author": "Javerk",
+  "main": "unused.cjs",
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "electron-builder": "26.18.0",
+    "electron-winstaller": "5.4.0"
+  }
+}
