@@ -1,0 +1,18 @@
+{
+  "manifest": {
+    "version": "0.3.5",
+    "files": [
+      {
+        "url": "Javerk-Mediaplayer-Setup-0.3.5.exe",
+        "sha512": "cohbkL1CZTpBwD4gQgrE9GexTyF27ZBT+21iCK1GXBCqrm8JToKgtq/o4xbZTVNJ4WmkTyV2V2qFYDDv85c90Q==",
+        "size": 129918193
+      }
+    ],
+    "path": "Javerk-Mediaplayer-Setup-0.3.5.exe",
+    "sha512": "cohbkL1CZTpBwD4gQgrE9GexTyF27ZBT+21iCK1GXBCqrm8JToKgtq/o4xbZTVNJ4WmkTyV2V2qFYDDv85c90Q==",
+    "releaseDate": "2026-10-29T11:16:26.820Z"
+  },
+  "archiveSha256": "e6758e9144cd67d13e980e67e4f0722839034b3a7c67af5d0b3de0a294612878",
+  "buildCommit": "1587bdfa4384c79e6aa65fb01adf6199dda49821",
+  "runId": "40863829714"
+}
