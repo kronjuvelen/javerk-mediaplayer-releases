@@ -42,5 +42,6 @@
     "app.asar.gz.025",
     "app.asar.gz.026",
     "app.asar.gz.027"
-  ]
+  ],
+  "packagingRevision": 1
 }

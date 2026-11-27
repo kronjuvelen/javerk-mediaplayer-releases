@@ -13,7 +13,7 @@ async function download(url) { const result = await fetch(url, { signal: AbortSi
   const runtime = await download(`https://github.com/electron/electron/releases/download/v${spec.electronVersion}/electron-v${spec.electronVersion}-win32-x64.zip`);
   if (hash(runtime) !== spec.electronSha256) throw new Error('Electron runtime checksum mismatch');
   fs.writeFileSync('electron.zip', runtime);
-  execFileSync('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', "Expand-Archive -LiteralPath 'electron.zip' -DestinationPath 'stage' -Force"], { stdio: 'inherit' });
+  execFileSync('pwsh.exe', ['-NoProfile', '-NonInteractive', '-Command', "Expand-Archive -LiteralPath 'electron.zip' -DestinationPath 'stage' -Force"], { stdio: 'inherit' });
   fs.writeFileSync('stage/resources/app.asar', zlib.gunzipSync(archive));
   fs.writeFileSync('stage/resources/app-update.yml', JSON.stringify({ ...spec.publish, updaterCacheDirName: 'per-panel-updater' }, null, 2));
   fs.renameSync('stage/electron.exe', 'stage/Javerk Mediaplayer.exe');
